@@ -2,6 +2,9 @@ SelectableRoundedImageView
 ==========================
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SelectableRoundedImageView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1234)
 
+
+<b><i>Note that this project is no longer maintained.</i></b>
+
 Android <code>ImageView</code> that supports different radii on each corner. It also 
 supports oval(and circle) shape and border. This would be especially useful for 
 being used inside <code>CardView</code> which should be rounded <b><i>only</i></b> top left and 
@@ -13,6 +16,14 @@ Get the sample app on Play Store.<br> [![Play Store Image](https://camo.githubus
 
 ![SelectableRoundedImageView Sample Screenshots][1]
 
+<b>Note</b>: When using with [Glide][9], be sure to add <code>asBitmap()</code> chain, like below.
+```java
+Glide.with(context)
+    .load(src)
+    .asBitmap()
+    .listener(l)
+    .into(imageView) 
+```
 <b>Note</b>: When using with [Android-Universal-Image-Loader][7], be sure to use <code>SimpleBitmapDisplayer</code> or <code>FadeInBitmapDisplayer</code> rather than <code>RoundedBitmapDisplayer</code>(or <code>RoundedVignetteBitmapDisplayer</code>) when building <code>DisplayImageOptions</code>. See below code.
 
 ```java
@@ -106,3 +117,4 @@ License
 [6]: http://github.com/vinc3m1/RoundedImageView
 [7]: https://github.com/nostra13/Android-Universal-Image-Loader
 [8]: https://github.com/square/picasso
+[9]: https://github.com/bumptech/glide
